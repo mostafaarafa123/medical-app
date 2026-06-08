@@ -17,7 +17,7 @@ The project demonstrates solid backend logic, session state management, and data
 - **Data Handling:** Pandas (Data manipulation and CSV storage)
 - **OS Integration:** Python `os` module for file path verification
 
-## 🚀 How to Run Locally
+##  How to Run Locally
 
 1. **Clone the repository:**
 ```bash
