@@ -59,7 +59,7 @@ if "logged_in" not in st.session_state:
 
 # Login and Registration Page
 def show_login():
-    st.title("🔑 Login")
+    st.title(" Login")
     tab1, tab2 = st.tabs(["Login", "Create Account"])
     
     with tab1:
@@ -83,10 +83,10 @@ def show_login():
 
 # Home Page
 def home():
-    st.title("🏥 Medical Appointment Booking")
+    st.title(" Medical Appointment Booking")
     
     # Search bar for filtering doctors by name or specialty
-    search_query = st.text_input("🔍 Search for a specialty or doctor")
+    search_query = st.text_input(" Search for a specialty or doctor")
 
     # List of medical specialties
     specializations = ["Dentistry", "Surgery", "Physiotherapy", "Internal Medicine"]
@@ -101,7 +101,7 @@ def home():
                 st.success(f"Showing doctors specialized in {spec}")
 
     # Section for adding a new doctor
-    st.subheader("➕ Add a New Doctor")
+    st.subheader(" Add a New Doctor")
 
     # Input fields for doctor details
     new_doctor_name = st.text_input("Doctor's Name")
@@ -115,7 +115,7 @@ def home():
         new_entry = pd.DataFrame([{
             "Name": new_doctor_name, 
             "Specialty": new_doctor_specialty, 
-            "Rating": f"⭐ {new_doctor_rating}"
+            "Rating": f" {new_doctor_rating}"
         }])
 
         # Append the new doctor to the existing doctors list
@@ -128,7 +128,7 @@ def home():
         st.success(f"Doctor {new_doctor_name} added successfully!")
         st.rerun()
 
-    st.subheader("👨‍⚕️ Available Doctors")
+    st.subheader(" Available Doctors")
 
     # Filter doctors based on selected specialty
     filtered_doctors = doctors
@@ -146,13 +146,13 @@ def home():
                     st.rerun()
 
     # Button to reset filters and return to home page
-    if st.button("🏠 Back to Home"):
+    if st.button(" Back to Home"):
         st.session_state.page = "Home"
         st.session_state.selected_specialty = None
         st.rerun()
 # Booking Page
 def booking():
-    st.title("📅 Book an Appointment")
+    st.title(" Book an Appointment")
     
     if not st.session_state.selected_doctor:
         st.warning("Please select a doctor first from the home page.")
@@ -163,13 +163,13 @@ def booking():
     
     doctor = st.session_state.selected_doctor
     st.subheader(f"Book an appointment with **{doctor}**")
-    date = st.date_input("📆 Select Date")
-    time = st.time_input("⏰ Select Time")
+    date = st.date_input(" Select Date")
+    time = st.time_input(" Select Time")
 
     if st.button("Confirm Booking"):
-        st.success("✅ Appointment booked successfully!")
+        st.success(" Appointment booked successfully!")
 
-    if st.button("🏠 Back to Home"):
+    if st.button(" Back to Home"):
         st.session_state.page = "Home"
         st.rerun()
 
