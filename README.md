@@ -19,6 +19,4 @@ The project demonstrates solid backend logic, session state management, and data
 
 ##  How to Run Locally
 
-1. **Clone the repository:**
-```bash
-   git clone [https://github.com/mostafaarafa123/medical-app.git](https://github.com/mostafaarafa123/medical-app.git)
+
